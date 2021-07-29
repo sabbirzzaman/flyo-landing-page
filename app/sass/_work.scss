@@ -1,0 +1,60 @@
+.work {
+  background: $DarkBlueMain;
+
+  .container {
+    @include brakepoints-up(medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      margin-bottom: 1.875rem;
+    }
+  }
+
+  &__content {
+    @include brakepoints-up(medium) {
+      padding-left: 1.875rem;
+    }
+  }
+
+  &__heading {
+    h2 {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      @include brakepoints-up(medium) {
+          font-size: 2.375rem;
+          line-height: 1.2;
+    }
+    }
+  }
+
+  &__text {
+    p {
+      font-size: $textSmall;
+      @include brakepoints-up(medium) {
+          font-size: $textMedium;
+      }
+    }
+  }
+
+  &__link {
+      a {
+          color: $cyan;
+          font-size: $textSmall;
+          border-bottom: 1px solid $cyan;
+          @include brakepoints-up(medium) {
+          font-size: $textMedium;
+          transition: color 200ms ease-in-out;
+          &:hover {
+            color: $offWhite;
+            border-color: $offWhite;
+          }
+      }
+    }
+  }
+}

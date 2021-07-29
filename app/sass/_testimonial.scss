@@ -1,0 +1,59 @@
+.testimonial {
+  background: $DarkBlueMain;
+
+  .container {
+    background-image: url("../../images/bg-quotes.png");
+    background-repeat: no-repeat;
+    background-position: 5% 1%;
+
+    @include brakepoints-up(medium) {
+      background-position: 5% 1%;
+    }
+
+    @include brakepoints-up(large) {
+      background-position: 0% 10%;
+    }
+  }
+
+  &__grid {
+    @include brakepoints-up(medium) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.875rem;
+    }
+  }
+
+  &__item {
+    background: $DarkBlueTestimonials;
+    padding: 2.5rem 1.25rem;
+    border-radius: 0.5rem;
+
+    @include brakepoints-down(small) {
+      &:not(:last-child) {
+        margin-bottom: 1.875rem;
+      }
+    }
+  }
+
+  &__text {
+    font-size: $textSmall;
+    margin-bottom: 1.875rem;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    margin-right: 1.25rem;
+    img {
+      width: 3.125rem;
+      border-radius: 3.125rem;
+    }
+  }
+
+  &__position {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,49 @@
+.features {
+  background: $DarkBlueMain;
+  text-align: center;
+
+  .container {
+    @include brakepoints-up(large) {
+      padding-top: 0;
+    }
+  }
+
+  &__grid {
+    @include brakepoints-down(small) {
+      &:not(:last-child) {
+        padding-bottom: 3.125rem;
+      }
+    }
+
+    @include brakepoints-up(medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__item {
+    @include brakepoints-down(small) {
+      &:not(:last-child) {
+        padding-bottom: 3.125rem;
+      }
+    }
+
+    @include brakepoints-up(medium) {
+      padding: 1.875rem 1.25rem;
+    }
+
+    @include brakepoints-up(large) {
+      padding: 1.25rem 6.25rem;
+    }
+  }
+
+  &__image {
+    margin-bottom: 1.875rem;
+  }
+
+  &__description {
+    p {
+      font-size: $textSmall;
+    }
+  }
+}

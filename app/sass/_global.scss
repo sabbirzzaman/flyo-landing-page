@@ -1,0 +1,165 @@
+// Body
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $white;
+}
+
+// Typography Body
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: $textMedium;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $offWhite;
+  margin-top: 0;
+}
+
+a {
+  font-family: "Open Sans", sans-serif;
+  font-size: $textMedium;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $offWhite;
+  text-decoration: none;
+  transition: color 200ms ease-in-out;
+  &:hover {
+    color: $white;
+  }
+}
+
+// Gloabal Button 
+
+.button {
+  padding: 0.9375rem 5rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  border-radius: 3.125rem;
+  color: $white;
+  background: linear-gradient(to right, $cyan, $blue);
+  border: none;
+  cursor: pointer;
+  transition: opacity 200ms ease-in-out;
+
+  &:hover {
+    background: $cyan;
+    opacity: 100%;
+  }
+}
+
+// Headings, Call-to-actions, Header Navigation
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  @include brakepoints-up(large) {
+    font-size: 2.375rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 0.9375rem;
+  @include brakepoints-up(large) {
+    font-size: 2.125rem;
+    margin-bottom: 1.875rem;
+  }
+}
+
+h4 {
+  font-size: $textLarge;
+  margin-bottom: 0.9375rem;
+}
+
+h6 {
+  font-size: 1rem;
+  margin-bottom: 0.3125rem;
+}
+
+// Navigation Visibility
+.hide-for-mobile {
+  @include brakepoints-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include brakepoints-up(large) {
+    display: none;
+  }
+}
+
+// Container Sizing
+// Container Sizing
+.container {
+    max-width: 71.25rem;
+    margin: 0 auto;
+  
+    &__pall {
+      padding-top: 2.5rem;
+      padding-left: 1.5rem;
+      padding-bottom: 2.5rem;
+      padding-right: 1.5rem;
+      @include brakepoints-up(large) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+      }
+    }
+    &__px {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      @include brakepoints-up(large) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+    }
+    &__py {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    &__pt {
+      padding-top: 2.5rem;
+      @include brakepoints-up(large) {
+        padding-top: 4rem;
+      }
+    }
+    &__pl {
+      padding-left: 1.5rem;
+    }
+    &__pb {
+      padding-bottom: 2.5rem;
+      @include brakepoints-up(large) {
+        padding-bottom: 4rem;
+      }
+    }
+    &__pr {
+      padding-right: 1.5rem;
+    }
+  }

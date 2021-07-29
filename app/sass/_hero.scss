@@ -1,0 +1,65 @@
+.hero {
+  background-color: $darkBlueIntro;
+  text-align: center;
+
+  @include brakepoints-up(large) {
+      background-image: url("../../images/bg-curvy-desktop.svg");
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+      padding-bottom: 6rem;
+  }
+
+  &__section1 {
+    background-image: url("../../images/bg-curvy-mobile.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 2.5rem;
+    padding-bottom: 1.25rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    @include brakepoints-up(large) {
+        background-image: none;
+    }
+}
+
+&__section2 {
+    background: $DarkBlueMain;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 2.5rem;
+    @include brakepoints-up(large) {
+        background: none;
+    }
+}
+
+&__intro {
+    margin-bottom: 3.125rem;
+    img {
+        width: 100%;
+        @include brakepoints-up(medium) {
+            width: 50%;
+        }        
+        @include brakepoints-up(large) {
+            width: 40%;
+        }
+    }
+  }
+
+  &__heading {
+    h1 {
+      margin: 0;
+    }
+  }
+
+  &__description {
+    p {
+      font-size: 1rem;
+      margin-bottom: 1.875rem;
+      @include brakepoints-up(large) {
+          font-size: 1rem;
+      }
+    }
+  }
+}
